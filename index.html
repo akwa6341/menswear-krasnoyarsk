@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мужская одежда — Красноярск</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Montserrat',sans-serif;background:#0a1628;color:#ffffff;min-height:100vh;overflow-x:hidden;}
+header{background:linear-gradient(135deg,#0d1f3c 0%,#132d5e 50%,#0d1f3c 100%);border-bottom:2px solid rgba(255,215,0,0.3);padding:20px 16px;position:sticky;top:0;z-index:100;backdrop-filter:blur(10px);}
+.logo-placeholder{width:220px;height:100px;margin:0 auto 16px;border:2px dashed rgba(255,215,0,0.5);border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.03);position:relative;overflow:hidden;}
+.logo-placeholder::before{content:'';position:absolute;inset:0;background:linear-gradient(45deg,transparent 40%,rgba(255,215,0,0.05) 50%,transparent 60%);animation:logoShimmer 3s infinite;}
+@keyframes logoShimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.logo-stickers{display:flex;align-items:center;gap:8px;font-size:28px;z-index:1;}
+.logo-text-hint{font-size:10px;color:rgba(255,215,0,0.5);letter-spacing:2px;text-transform:uppercase;position:absolute;bottom:6px;}
+.logo-placeholder img{width:100%;height:100%;object-fit:contain;position:relative;z-index:2;}
+.contact-info{max-width:500px;margin:0 auto;text-align:left;padding-left:10px;}
+.contact-item{display:flex;align-items:center;gap:8px;padding:4px 0;font-size:13px;color:rgba(255,255,255,0.85);line-height:1.5;}
+.contact-item a{color:#ffd700;text-decoration:none;font-weight:600;transition:all 0.3s;}
+.contact-item a:hover{color:#fff;text-shadow:0 0 10px rgba(255,215,0,0.5);}
+.contact-item .emoji{font-size:16px;flex-shrink:0;}
+.halva-badge{display:inline-flex;align-items:center;gap:4px;background:linear-gradient(135deg,#ff4444,#cc0033);color:#fff;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:1px;margin-left:4px;}
+main{max-width:600px;margin:0 auto;padding:0 16px 40px;}
+.section-title{text-align:center;padding:32px 0 20px;}
+.section-title h2{font-family:'Playfair Display',serif;font-size:26px;font-weight:800;color:#ffd700;letter-spacing:2px;text-transform:uppercase;position:relative;display:inline-block;}
+.section-title h2::after{content:'';position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);width:60px;height:3px;background:linear-gradient(90deg,transparent,#ffd700,transparent);border-radius:2px;}
+.promo-banner{background:linear-gradient(135deg,#1a3a6e 0%,#0f2847 100%);border:1px solid rgba(255,215,0,0.3);border-radius:16px;padding:24px 20px;margin-bottom:12px;text-align:center;position:relative;overflow:hidden;cursor:pointer;transition:all 0.3s ease;}
+.promo-banner:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,215,0,0.15);border-color:rgba(255,215,0,0.6);}
+.promo-banner::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,215,0,0.05) 0%,transparent 50%);animation:promoGlow 4s ease-in-out infinite;}
+@keyframes promoGlow{0%,100%{transform:scale(1);opacity:0.5}50%{transform:scale(1.1);opacity:1}}
+.promo-icon{font-size:36px;margin-bottom:8px;position:relative;z-index:1;}
+.promo-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:800;color:#ffd700;margin-bottom:6px;position:relative;z-index:1;}
+.promo-desc{font-size:13px;color:rgba(255,255,255,0.7);position:relative;z-index:1;}
+.promo-badge{position:absolute;top:12px;right:12px;background:#ff3333;color:#fff;font-size:10px;font-weight:800;padding:4px 10px;border-radius:20px;letter-spacing:1px;animation:badgePulse 2s ease-in-out infinite;z-index:2;}
+@keyframes badgePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+.promo-banner img{width:100%;max-height:200px;object-fit:cover;border-radius:10px;margin-bottom:12px;position:relative;z-index:1;}
+.catalog-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-top:8px;}
+.catalog-card{background:linear-gradient(145deg,#132d5e 0%,#0d2248 100%);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:20px 16px 18px;text-align:center;cursor:pointer;transition:all 0.35s cubic-bezier(0.4,0,0.2,1);position:relative;overflow:hidden;}
+.catalog-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#ffd700,transparent);opacity:0;transition:opacity 0.3s;}
+.catalog-card:hover::before{opacity:1;}
+.catalog-card::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at center,rgba(255,215,0,0.06) 0%,transparent 70%);opacity:0;transition:opacity 0.3s;}
+.catalog-card:hover::after{opacity:1;}
+.catalog-card:hover{transform:translateY(-4px);border-color:rgba(255,215,0,0.3);box-shadow:0 12px 35px rgba(0,0,0,0.4);}
+.catalog-card:active{transform:translateY(-1px) scale(0.98);}
+.card-photo{width:100%;height:120px;border-radius:10px;overflow:hidden;margin-bottom:12px;background:rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:center;position:relative;z-index:1;}
+.card-photo img{width:100%;height:100%;object-fit:cover;}
+.card-photo .placeholder-icon{font-size:42px;}
+.card-name{font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.9);position:relative;z-index:1;}
+.catalog-card:hover .card-name{color:#ffd700;}
+.card-arrow{position:absolute;bottom:8px;right:10px;font-size:14px;color:rgba(255,215,0,0.3);transition:all 0.3s;}
+.catalog-card:hover .card-arrow{color:rgba(255,215,0,0.8);transform:translateX(3px);}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,215,0,0.2),transparent);margin:8px 0;}
+.scroll-decoration{text-align:center;padding:24px 0 8px;color:rgba(255,255,255,0.15);font-size:11px;letter-spacing:4px;text-transform:uppercase;}
+@media(max-width:360px){.catalog-grid{grid-template-columns:1fr}.section-title h2{font-size:22px}.logo-placeholder{width:180px;height:80px;}}
+@media(min-width:500px){.contact-item{font-size:14px}header{padding:24px 20px;}}
+.ambient{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden;}
+.ambient span{position:absolute;width:2px;height:2px;background:rgba(255,215,0,0.15);border-radius:50%;animation:float linear infinite;}
+.ambient span:nth-child(1){left:10%;top:20%;animation-duration:8s;}
+.ambient span:nth-child(2){left:30%;top:60%;animation-duration:12s;animation-delay:1s;}
+.ambient span:nth-child(3){left:70%;top:40%;animation-duration:10s;animation-delay:2s;}
+.ambient span:nth-child(4){left:90%;top:80%;animation-duration:9s;animation-delay:0.5s;}
+.ambient span:nth-child(5){left:50%;top:10%;animation-duration:11s;animation-delay:3s;}
+@keyframes float{0%{transform:translateY(0) scale(1);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-100vh) scale(0.5);opacity:0}}
+main,header{position:relative;z-index:1;}
+</style>
+</head>
+<body>
+<div class="ambient"><span></span><span></span><span></span><span></span><span></span></div>
+<header>
+<div class="logo-placeholder">
+<div class="logo-stickers">👔 🧥 👞</div>
+<span class="logo-text-hint">ваш логотип</span>
+</div>
+<div class="contact-info">
+<div class="contact-item"><span class="emoji">📍</span><span>г. Красноярск, ул. Молокова, 56/1; ТК «Оптима»</span></div>
+<div class="contact-item"><span class="emoji">🕙</span><span>ПН–ВС с 10:00 до 21:00</span></div>
+<div class="contact-item"><span class="emoji">💳</span><span>Есть безнал. расчёт</span></div>
+<div class="contact-item"><span class="emoji">💳</span><span class="halva-badge">ХАЛВА</span></div>
+<div class="contact-item"><span class="emoji">☎️</span><a href="tel:+73912883575">8 (391) 288-35-75</a></div>
+</div>
+</header>
+<main>
+<div class="section-title"><h2>🔥 Акции и скидки</h2></div>
+<div class="promo-banner">
+<div class="promo-badge">SALE</div>
+<div class="promo-icon">🏷️</div>
+<div class="promo-title">Сезонные скидки</div>
+<div class="promo-desc">Выгодные предложения на избранные коллекции</div>
+</div>
+<div class="promo-banner">
+<div class="promo-badge">NEW</div>
+<div class="promo-icon">✨</div>
+<div class="promo-title">Новинки сезона</div>
+<div class="promo-desc">Свежие поступления уже в продаже</div>
+</div>
+<div class="divider"></div>
+<div class="section-title"><h2>Каталог</h2></div>
+<div class="catalog-grid">
+<div class="catalog-card">
+<div class="card-photo"><span class="placeholder-icon">🧥</span></div>
+<span class="card-name">Верхняя одежда</span>
+<span class="card-arrow">→</span>
+</div>
+<div class="catalog-card">
+<div class="card-photo"><span class="placeholder-icon">👔</span></div>
+<span class="card-name">Костюмы</span>
+<span class="card-arrow">→</span>
+</div>
+<div class="catalog-card">
+<div class="card-photo"><span class="placeholder-icon">👕</span></div>
+<span class="card-name">Рубашки</span>
+<span class="card-arrow">→</span>
+</div>
+<div class="catalog-card">
+<div class="card-photo"><span class="placeholder-icon">🧣</span></div>
+<span class="card-name">Трикотаж</span>
+<span class="card-arrow">→</span>
+</div>
+<div class="catalog-card">
+<div class="card-photo"><span class="placeholder-icon">👖</span></div>
+<span class="card-name">Брюки</span>
+<span class="card-arrow">→</span>
+</div>
+<div class="catalog-card">
+<div class="card-photo"><span class="placeholder-icon">⌚</span></div>
+<span class="card-name">Аксессуары</span>
+<span class="card-arrow">→</span>
+</div>
+</div>
+<div class="scroll-decoration">• • •</div>
+</main>
+</body>
+</html>
